@@ -9,7 +9,7 @@
 
 <body>
     <h1>楽曲管理メニュー</h1>
-    <form action="" method="post">
+    <form action="branch.php" method="post">
         <button type="submit" name="itiran">楽曲一覧</button>
         <button type="submit" name="toroku">楽曲登録</button>
         <button type="submit" name="kosin">楽曲更新</button>
