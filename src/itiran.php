@@ -40,6 +40,12 @@ $connect = 'mysql:host=' . SERVER . ';dbname=' . DBNAME . ';charset=utf8';
         }
         ?>
 
+        <form action="menu.php" method="post">
+            <button type="submit" name="itiran">戻る
+            </button>
+        </form>
+
+
 </body>
 
 </html>
