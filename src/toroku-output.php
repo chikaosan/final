@@ -32,13 +32,15 @@ $connect = 'mysql:host=' . SERVER . ';dbname=' . DBNAME . ';charset=utf8';
         echo '<font color="red">追加に失敗しました。</font>';
     }
     echo '<div class="CustomerTable">';
-    echo '楽曲名:', $_POST['musicid'];
-    echo '</br>';
-    echo '曲名:', $_POST['musicname'];
-    echo '</br>';
-    echo 'アーティスト名:', $_POST['artist'];
-    echo '</br>';
-    echo '年代:', $_POST['era'];
+    foreach ($pdo->query('select * from music') as $row) {
+        echo '<tr>';
+        echo '<td>', $row['musicid'], '</td>';
+        echo '<td>', $row['musicname'], '</td>';
+        echo '<td>', $row['artistname'], '</td>';
+        echo '<td>', $row['era'], '</td>';
+        echo '<tr>';
+        echo "\n";
+    }
     echo '</div>';
     ?>
     <div class="wrapper">
