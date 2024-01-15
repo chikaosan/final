@@ -14,7 +14,7 @@
         <button type="submit" name="itiran">楽曲一覧</button>
     </form>
 
-    <form action="toroku.php" method="post">
+    <form action="toroku-input.php" method="post">
         <button type="submit" name="toroku">楽曲登録</button>
     </form>
 
