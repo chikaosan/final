@@ -1,3 +1,12 @@
+<?php
+const SERVER = 'mysql220.phy.lolipop.lan';
+const DBNAME = 'LAA1517339-final';
+const USER = 'LAA1517339';
+const PASS = '2201394';
+
+$connect = 'mysql:host=' . SERVER . ';dbname=' . DBNAME . ';charset=utf8';
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -9,28 +18,28 @@
 
 <body>
     <?php
-        $pdo = new PDO($connect, USER, PASS);
-        $sql = $pdo->prepare('select * from music where musicid=?');
-        $sql->execute([$_POST['musicid']]);
-        if (empty($sql->fetchAll())) {
-            $sql = $pdo->prepare('insert into music values (null,?,?,?,?,?,?)');
-            $sql->execute([
-                $_POST['musicid'],
-                $_POST['musicname'],
-                $_POST['artistname'],
-                $_POST['era'],
-            ]);
-            echo '<div class="CustomerTable">';
-            echo '楽曲名:', $_POST['musicid'];
-            echo '</br>';
-            echo '曲名:', $_POST['musicname'];
-            echo '</br>';
-            echo 'アーティスト名:', $_POST['artist'];
-            echo '</br>';
-            echo '年代:', $_POST['era'];
-            echo '</div>';
-        }
-        ?>
+    $pdo = new PDO($connect, USER, PASS);
+    $sql = $pdo->prepare('select * from music where musicid=?');
+    $sql->execute([$_POST['musicid']]);
+    if (empty($sql->fetchAll())) {
+        $sql = $pdo->prepare('insert into music values (null,?,?,?,?,?,?)');
+        $sql->execute([
+            $_POST['musicid'],
+            $_POST['musicname'],
+            $_POST['artistname'],
+            $_POST['era'],
+        ]);
+        echo '<div class="CustomerTable">';
+        echo '楽曲名:', $_POST['musicid'];
+        echo '</br>';
+        echo '曲名:', $_POST['musicname'];
+        echo '</br>';
+        echo 'アーティスト名:', $_POST['artist'];
+        echo '</br>';
+        echo '年代:', $_POST['era'];
+        echo '</div>';
+    }
+    ?>
     <div class="wrapper">
 
         <div class="back">
