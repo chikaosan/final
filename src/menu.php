@@ -23,7 +23,7 @@
         <button type="submit" name="kosin">楽曲更新</button>
     </form>
 
-    <form action="delete.php" method="post">
+    <form action="delete-input.php" method="post">
         <button type="submit" name="delete">楽曲削除</button>
     </form>
 
