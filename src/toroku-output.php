@@ -19,7 +19,7 @@ $connect = 'mysql:host=' . SERVER . ';dbname=' . DBNAME . ';charset=utf8';
 <body>
     <?php
     $pdo = new PDO($connect, USER, PASS);
-    $sql = $pdo->prepare('insert into product(musicname, artistname, era)values (?, ?, ?)');
+    $sql = $pdo->prepare('insert into music(musicname, artistname, era)values (?, ?, ?)');
     if (empty($_POST['musicname'])) {
         echo '曲名を入力してください。';
     } elseif (empty($_POST['artistname'])) {
@@ -32,17 +32,30 @@ $connect = 'mysql:host=' . SERVER . ';dbname=' . DBNAME . ';charset=utf8';
         echo '<font color="red">追加に失敗しました。</font>';
     }
     echo '<div class="CustomerTable">';
-    foreach ($pdo->query('select * from music') as $row) {
-        echo '<tr>';
-        echo '<td>', $row['musicid'], '</td>';
-        echo '<td>', $row['musicname'], '</td>';
-        echo '<td>', $row['artistname'], '</td>';
-        echo '<td>', $row['era'], '</td>';
-        echo '<tr>';
-        echo "\n";
-    }
-    echo '</div>';
     ?>
+    <table>
+        <tr>
+            <th>音楽ID</th>
+            <th>曲名</th>
+            <th>アーティスト名</th>
+            <th>年代</th>
+        </tr>
+
+        <?php
+        $pdo = new PDO($connect, USER, PASS);
+        foreach ($pdo->query('select * from music') as $row) {
+            echo '<tr>';
+            echo '<td>', $row['musicid'], '</td>';
+            echo '<td>', $row['musicname'], '</td>';
+            echo '<td>', $row['artistname'], '</td>';
+            echo '<td>', $row['era'], '</td>';
+            echo '</td>';
+            echo '</tr>';
+            echo "\n";
+        }
+        ?>
+    </table>
+    </div>
     <div class="wrapper">
 
         <div class="back">
