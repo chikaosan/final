@@ -20,14 +20,8 @@
 
 
     <form action="kosin-input.php" method="post">
-        <button type="submit" name="kosin">楽曲更新</button>
+        <button type="submit" name="kosin">楽曲更新・削除</button>
     </form>
-
-    <form action="delete-input.php" method="post">
-        <button type="submit" name="delete">楽曲削除</button>
-    </form>
-
-
 
 </body>
 
