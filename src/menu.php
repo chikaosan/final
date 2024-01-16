@@ -19,7 +19,7 @@
     </form>
 
 
-    <form action="kosin.php" method="post">
+    <form action="kosin-input.php" method="post">
         <button type="submit" name="kosin">楽曲更新</button>
     </form>
 
