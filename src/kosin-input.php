@@ -11,16 +11,16 @@ $connect = 'mysql:host=' . SERVER . ';dbname=' . DBNAME . ';charset=utf8';
 <html lang="ja">
 
 <head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="style.css">
-	<title>楽曲更新</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/kosin.css">
+    <title>楽曲更新</title>
 </head>
 
 <body>
-	<div class="th0">商品番号</div>
-	<div class="th1">商品名</div>
-	<div class="th1">商品価格</div>
-	<?php
+    <div class="th0">商品番号</div>
+    <div class="th1">商品名</div>
+    <div class="th1">商品価格</div>
+    <?php
 	$pdo = new PDO($connect, USER, PASS);
 
 	foreach ($pdo->query('select * from music') as $row) {
@@ -37,7 +37,10 @@ $connect = 'mysql:host=' . SERVER . ';dbname=' . DBNAME . ';charset=utf8';
 		echo '<div class="td1">';
 		echo '<input type="text" name="era" value="', $row['era'], '">';
 		echo '</div> ';
-		echo '<div class="td2"><input type="submit" value="更新"></div>';
+		echo '<a href="kosin-output.php?musicid=', $row['musicid'], '"class="update">更新</a>';
+		echo ' ';
+		echo '<a href="delete-output.php?musicid=', $row['musicid'], '"class="delete">削除</a>';
+
 		echo '</form>';
 		echo "\n";
 	}
