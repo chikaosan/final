@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+.itiran {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+  }
+  
+  .a header{
+      color: black;
+  }
+  
+  .a {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 9px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  .a input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .a button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
+  .a button:hover,.form button:active,.form button:focus {
+    background: #43A047;
+  }
+  
+  
+  .a .register-form {
+    display: none;
+  }
+  
+table {
+    border-collapse: collapse;  /* セルの線を重ねる */
+    display: flex;
+}
+
+th,td {
+    padding: 5px 10px;          /* 余白指定 */
+}
+
+th {
+    background-color: #2196F3;  /* 背景色指定 */
+    color:  #fff;               /* 文字色指定 */
+    font-weight:  normal;       /* 文字の太さ指定 */
+    position:  relative;        /* 位置指定 */
+    z-index: 10;                /* 重なり調整 */
+}
+
+td {
+    background-color:  #c0c9ff; /* 背景色指定 */
+    padding-left: 25px;         /* 余白指定 */
+}
+
+th::after {
+    content:'';                 /* 空の要素を作る */
+    position:  absolute;        /* 位置指定 */
+    height: 24px;               /* 高さ指定 */
+    width: 24px;                /* 幅指定 */
+    background-color: #2196F3;  /* 背景色指定 */
+    transform:  rotate(45deg);  /* 要素を回転 */
+    top: 5px;                   /* 位置指定 */
+    right: -12px;               /* 位置指定 */
+    z-index:  -1;               /* 重なり調整 */
+}
+
+tr {
+    border-bottom:  solid #fff; /* 線指定 */
+}
+
+.wrapper {
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;}
+
+
+.back input[type="submit"] {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.back input[type="submit"]:hover {
+    background-color: #db0000;
+}
+
