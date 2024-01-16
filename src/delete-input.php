@@ -34,7 +34,7 @@ $connect = 'mysql:host=' . SERVER . ';dbname=' . DBNAME . ';charset=utf8';
             echo '<td>', $row['artistname'], '</td>';
             echo '<td>', $row['era'], '</td>';
             echo '<td>';
-            echo '<a href="delete-output.php?id=', $row['musicid'], '">削除</a>';
+            echo '<a href="delete-output.php?musicid=', $row['musicid'], '">削除</a>';
             echo '</td>';
             echo '</tr>';
             echo "\n";
