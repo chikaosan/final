@@ -11,16 +11,17 @@ $connect = 'mysql:host=' . SERVER . ';dbname=' . DBNAME . ';charset=utf8';
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/kosin.css">
-    <title>楽曲更新</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/kosin.css">
+	<title>楽曲更新</title>
 </head>
 
 <body>
-    <div class="th0">商品番号</div>
-    <div class="th1">商品名</div>
-    <div class="th1">商品価格</div>
-    <?php
+	<div class="th0">音楽ID</div>
+	<div class="th1">曲名</div>
+	<div class="th1">アーティスト名</div>
+	<div class="th1">年代</div>
+	<?php
 	$pdo = new PDO($connect, USER, PASS);
 
 	foreach ($pdo->query('select * from music') as $row) {
