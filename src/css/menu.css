@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+h1 {
+    position: relative;
+    background: #f1f8ff;
+    padding: 0.25em 0.5em;
+    border-left: solid 2em #5c9ee7;
+  }
+  
+  h1:before {
+    font-family: "Font Awesome";
+    content: "♫";
+    position: absolute;
+    padding: 0em;
+    color: white;
+    font-weight: 900;
+    left: -1.35em;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .wrapper {
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;}
+
+
+.all input[type="submit"] {
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.all input[type="submit"]:hover {
+    border: 2px solid #db0000;
+    background: #FFF;
+    color: #333;
+}
+.add input[type="submit"] {
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.add input[type="submit"]:hover {
+    border: 2px solid #db0000;
+    background: #FFF;
+    color: #333;
+}
+.update input[type="submit"] {
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.update input[type="submit"]:hover {
+    border: 2px solid #db0000;
+    background: #FFF;
+    color: #333;
+}
