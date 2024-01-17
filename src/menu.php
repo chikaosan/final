@@ -4,24 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+
     <title>PHP最終課題</title>
 </head>
 
 <body>
     <h1>楽曲管理メニュー</h1>
 
-    <form action="itiran.php" method="post">
-        <button type="submit" name="itiran">楽曲一覧</button>
-    </form>
+    </br>
+    <div class="wrapper">
+        <div class="all">
+            <form action="itiran.php" method="post">
+                <input type="submit" value="楽曲一覧"></input>
+            </form>
+        </div>
 
-    <form action="toroku-input.php" method="post">
-        <button type="submit" name="toroku">楽曲登録</button>
-    </form>
+        <div class="add">
+            <form action="toroku-input.php" method="post">
+                <input type="submit" value="楽曲登録"></input>
+            </form>
+        </div>
 
-
-    <form action="kosin-input.php" method="post">
-        <button type="submit" name="kosin">楽曲更新・削除</button>
-    </form>
+        <div class="update">
+            <form action="kosin-input.php" method="post">
+                <input type="submit" value="楽曲更新・削除"></input>
+            </form>
+        </div>
+    </div>
 
 </body>
 
